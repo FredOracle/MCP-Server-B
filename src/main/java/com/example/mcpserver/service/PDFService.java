@@ -12,7 +12,7 @@ public class PDFService {
 
   @Tool(name = "pdf-service.convert-to-pdf", description = "Fredt-Stone-PDF aaaaaaa")
   public String convertToPDF(String input) {
-    log.info("===================Converting input to PDF: ", input);
+    log.info("=======================Converting input to PDF: ", input);
     return "PDF of " + input;
   }
 
