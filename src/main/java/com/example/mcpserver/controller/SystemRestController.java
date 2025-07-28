@@ -19,7 +19,7 @@ public class SystemRestController {
 
   @PostMapping(value = "/message")
   public String message(@RequestBody String message) {
-    System.out.println(message);
+    System.out.println("使用HTTP API进行调用：   " +  message);
     return mcpService.message(message);
   }
 
