@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PDFService {
 
-  @Tool(name = "pdf-service.convert-to-pdf", description = "Fredt-Stone-PDF aaaaaaa")
+  @Tool(name = "pdf-service.convert-to-pdf", description = "解析PDF文件")
   public String convertToPDF(String input) {
     log.info("=======================Converting input to PDF: ", input);
     return "PDF of " + input;

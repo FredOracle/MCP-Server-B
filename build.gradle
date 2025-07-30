@@ -39,10 +39,30 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 
+    implementation 'org.springframework.ai:spring-ai-starter-mcp-server-webmvc'
     implementation 'org.springframework.ai:spring-ai-markdown-document-reader'
     implementation 'org.springframework.ai:spring-ai-pdf-document-reader'
 
-    implementation 'org.springframework.ai:spring-ai-starter-mcp-server-webmvc'
+
+    implementation 'com.itextpdf:html2pdf:3.0.1'
+
+    implementation 'org.apache.pdfbox:pdfbox:2.0.27'
+
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml-full:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.4.0'
+    implementation 'com.openhtmltopdf:openhtmltopdf-core:1.0.10'
+    implementation 'com.openhtmltopdf:openhtmltopdf-pdfbox:1.0.10'
+    implementation group: 'org.commonmark', name: 'commonmark', version: '0.25.0'
+    implementation group: 'me.mattstudios.utils', name: 'commonmark-java-mf', version: '0.1.3'
+    implementation group: 'com.luhuiguo', name: 'aspose-words', version: '23.1'
+    implementation group: 'org.docx4j', name: 'docx4j-ImportXHTML-core', version: '11.5.4'
+    implementation group: 'org.docx4j', name: 'docx4j-ImportXHTML-parent', version: '11.5.4'
+    implementation group: 'org.docx4j', name: 'docx4j-JAXB-ReferenceImpl', version: '11.5.4'
+    implementation group: 'org.docx4j', name: 'docx4j-core', version: '11.5.4'
+
+
+
 
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
     implementation 'com.squareup.okio:okio:3.6.0'

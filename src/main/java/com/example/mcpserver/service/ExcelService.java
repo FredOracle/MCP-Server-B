@@ -1,35 +1,32 @@
 package com.example.mcpserver.service;
 
 import org.springframework.ai.tool.annotation.Tool;
-import org.springframework.ai.tool.execution.ToolCallResultConverter;
 import org.springframework.stereotype.Service;
 
-import java.lang.annotation.Annotation;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.*;
 
 @Service
-public class ExcelService implements Tool {
-    @Override
-    public String name() {
-        return "excel-util-service";
+public class ExcelService {
+
+    @Tool(name = "excel-util-service.parse-excel", description = "Excel工具类")
+    public List<Map<String, String>> parseExcel(String excel) {
+        System.out.println(excel);
+        Map<String, String> record = new HashMap<>();
+        List<Map<String, String>> records = new ArrayList<>();
+        record.put("name", "张三");
+        record.put("age", "18");
+        record.put("sex", "男");
+        records.add(record);
+        record = new HashMap<>();
+        record.put("name", "李四");
+        record.put("age", "19");
+        record.put("sex", "女");
+        records.add(record);
+
+        System.out.println("解析Excel成功");
+        return records;
     }
 
-    @Override
-    public String description() {
-        return "Excel 工具类";
-    }
-
-    @Override
-    public boolean returnDirect() {
-        return false;
-    }
-
-    @Override
-    public Class<? extends ToolCallResultConverter> resultConverter() {
-        return null;
-    }
-
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
-    }
 }
